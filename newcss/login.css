@@ -1,0 +1,158 @@
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+   height: 50vh;
+   background-color:rgba(238, 238, 238, 0.76) ;
+   margin: 10%;
+   padding: 10px;
+    
+    
+}
+.imgbox{
+    width: 100px;
+    position: relative;
+    left: 45%;
+    top: 20px;
+    
+   
+}
+.imgbox img{
+    width: 100%;
+}
+
+.headertext{
+    color:rgb(77, 77, 241) ;
+    font-size: 1.4em;
+    font-weight: 100;
+    text-align: center;
+    position: relative;
+    top: 50px;
+   
+}
+.formbox{
+   
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    width: 800px;
+}
+.input{
+    display: grid;
+
+}
+.input label{
+    font-size: 24px;
+}
+.input input{
+    width: 600px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom:20px ;
+    border: none;
+}
+.input input:hover{
+    box-shadow: 0px 1px 5px rgb(93, 93, 236);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+.buttons .login{
+    padding: 10px;
+    background-color: rgb(55, 55, 235);
+    border: none;
+    font-size: 1.4em;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+.buttons .login:hover{
+    background-color: rgb(63, 63, 138);
+    scale: 105%;
+    border: 1px solid whitesmoke;
+}
+.buttons .home{
+    padding: 10px;
+    background-color: rgb(42, 218, 86);
+    border: none;
+    font-size: 1.4em;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+.buttons .home:hover{
+    background-color: rgb(82, 160, 101);
+    scale: 105%;
+    border: 1px solid whitesmoke;
+}
+.buttons .home a{
+    text-decoration: none;
+    color: white;
+}
+
+
+@media (max-width: 800px) {
+    .maincon{
+        display: block;
+        justify-content: center;
+        align-items: center;
+     overflow: hidden;
+     
+    }
+    .imgbox{
+        width: 100px;
+        position: relative;
+        left: 45%;
+        margin-bottom: -40px;
+    }
+    .imgbox img{
+        width: 100%;
+    }
+    form{
+   display: grid;
+   justify-content: center;
+    }
+   .input input{
+        width: 100%;
+        height: 30px;
+        margin-bottom:14px ;
+        border: 1px solid rgb(153, 140, 140);
+    }
+    .input label{
+        font-size: 18px;
+        text-align: center;
+    }
+    .buttons{
+        margin-top: -10px;
+     
+    }
+    .buttons .login{
+        font-size: 1em;
+    }
+    .buttons .home{
+        font-size: 1em;
+    }
+}
+@media (max-height: 600px) {
+
+    .container{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+       height: 70vh;
+       background-color:rgba(238, 238, 238, 0.76) ;
+       margin: 10%;
+       padding: 10px;
+        
+        
+    }
+}

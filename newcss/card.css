@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.link a{
+        background-color:   lightgreen;
+        border: none;
+        color: white;
+        font-size: 1.3em;
+        padding: 5px;
+        position: relative;
+        top: 10px;
+        left: 5px;
+        text-decoration: none;
+        border-radius: 3px;
+}
+.formbox{
+    background-color: rgba(20, 81, 161, 0.747);
+    height: 10%;
+    display: grid;
+    justify-content: center;
+}
+form{
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+}
+form label{
+    font-size: 30px;
+}
+form input{
+    height: 50px;
+    font-size: 30px;
+}
+form button{
+    background-color:  rgba(20, 82, 161, 0.829);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.3em;
+    padding: 10px;
+    position: relative;
+    left: 32%;
+    top: 5px;
+    cursor: pointer;
+}
+form button:hover{
+    scale: 102%;
+    background-color:  rgba(8, 44, 90, 0.829);
+}
+.btn{
+   display: flex;
+   justify-content: center;  
+   background-color: rgba(20, 81, 161, 0.747);
+   gap:20px;
+   padding: 20px;
+}
+.btn .printcard{
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: lightgreen;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.btn .downloadcard{
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: darkblue;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.printcard:hover{
+    background-color: rgb(4, 44, 14);
+}
+.downloadcard:hover{
+    background-color: rgb(4, 4, 44);
+}
+

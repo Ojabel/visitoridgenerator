@@ -1,0 +1,245 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgba(20, 81, 161, 0.699);
+  
+}
+.container{
+  position: relative;
+  top: -60px;
+}
+.box{
+   
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+.box h2{
+    font-size: 2em;
+    color: white;
+}
+.innercon{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    height: 68vh;
+    padding: 10px;
+}
+.innercon p{
+    font-size: 1.5em;
+    color: rgb(42, 10, 158);
+}
+.main{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    height: 50vh;
+    padding: 5%;
+    border: 1px solid white;
+    background-color: rgba(20, 81, 161, 0.747);
+    box-shadow: 1px 5px 5px 6px  rgba(20, 81, 161, 0.747);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    top: -30px;
+}
+.main .input input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    color:rgb(3, 3, 3);
+    text-align: center;
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+#inputfield{
+    display: grid;
+    background-color: rgb(206, 203, 203);
+    margin-top: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+.sub{
+    display: grid;
+    justify-content: center;
+    margin-top: 10px;
+}
+.sub input{
+    background-color: rgb(32, 8, 139);
+    color: whitesmoke;
+    font-size: 1.3em;
+    border: 2px solid whitesmoke;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.sub input:hover{
+    scale: 105.0%;
+    background-color: rgb(7, 24, 80);
+    color: whitesmoke;
+}
+
+
+
+
+.time{
+    background-color:rgb(235, 233, 233);
+    height: 70px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+
+
+}
+.time form input{
+    width: 180px;
+    height: 40px;
+    background-color: rgb(127, 238, 182);
+    border: none;
+    margin-top: 15px;
+}
+.time form button{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(1, 1, 2);
+    border: none;
+    color: white;
+    font-size: 15px;
+    padding: 9px;
+
+}
+.link{
+    display: flex;
+    justify-content: center;
+}
+.link a{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.link a:hover{
+    background-color: whitesmoke;
+    color: rgb(44, 44, 214);
+    transition: 1s ease-in-out;
+}
+
+/*
+.time a{
+    color: rgb(255, 255, 255);
+    background-color: rgba(62, 52, 199, 0.774);
+    text-decoration: none;
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    left: 150px;
+    top: 30px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.time a:hover{
+    scale: 105.0%;
+    background-color: rgb(7, 24, 80);
+    color: whitesmoke;
+}
+*/
+@media (max-width: 430px) {
+    .box h2{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .box h2{
+        font-size: 1em;
+    }
+    .innercon{
+        position: relative;
+        top: -20px;
+    }
+    .main{
+        height: 80%;
+    }
+    .innercon p{
+        font-size: 1em;
+        position: relative;
+        top: -20px;
+    }
+    form .input input{
+        font-size: 1em;
+    }
+    #inputfield{
+        height: 20%;
+    }
+    .time form{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content:space-around;
+        background-color:rgb(235, 233, 233);
+        position: relative;
+        top: -20px;
+    }
+    .time form .timestyle{
+        width: 30%;
+        height: 40px;
+    }
+    .time form button{
+        width: fit-content;
+        padding: 5px;
+        height: 40px;
+        position: relative;
+        top: 7px;
+    }
+   
+
+   /* 
+.time{
+    background-color:rgb(235, 233, 233);
+    display: grid;
+    justify-content: center;
+ 
+}
+*/
+}
+
+@media (max-height: 700px) {
+    .main{
+        height: 100%;
+    }
+
+}
+
+@media (max-height: 550px) {
+    .main{
+        height: 100%;
+    }
+
+    .main .input input{
+        width: 100%;
+        height: 25px;
+        outline: none;
+        border: none;
+        margin-bottom: 20px;
+        color:rgb(3, 3, 3);
+        text-align: center;
+        position: relative;
+        top: 10px;
+        font-size: 15px;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+
+}

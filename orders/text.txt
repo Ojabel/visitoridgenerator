@@ -1,0 +1,221 @@
+
+
+$insert = mysqli_query($conn,"UPDATE visitor SET time=now() WHERE id_no=-id_no+1");
+
+
+
+
+
+<?php
+include('db.php');
+
+
+
+
+
+   
+    $id_no = $_POST['id_no'];
+   
+
+
+$query = mysqli_query($conn, "SELECT time FROM visitor  WHERE id_no='$id_no'");
+if (mysqli_num_rows($query)!=00) {
+    # code...
+   
+    echo "<script>alert('Guest already Time Out')</script>";
+    echo "<script>window.location='index.php'</script>";
+
+   
+}
+else{
+    
+    $id_no = $_POST['id_no'];
+          $sql = "UPDATE visitor SET time=now() WHERE id_no='$id_no' ";
+
+            $result = mysqli_query($conn, $sql);
+          
+        if ($result) {
+            # code...
+        
+        
+            echo "<script>alert('Guest Time Out Successfully!')</script>";
+            echo "<script>window.location='index.php'</script>";
+        
+           
+            
+        }
+             
+            # code...
+        }
+  
+            
+
+        
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<?php
+	session_start();
+	if(!ISSET($_SESSION['user_id'])){
+		header('location:index.php');
+	}
+?>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="css/visitorlog1.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<a class="navbar-brand" >VISITOR MANAGEMENT, ADMIN PANEL</a>
+		</div>
+	</nav>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+	    <div class="col-md-6">
+			<h1>WELCOME:</h1>
+			<?php
+				require('db.php');
+			
+				
+				$query = mysqli_query($conn, "SELECT * FROM `user` WHERE `user_id`='$_SESSION[user_id]'") ;
+				$fetch = mysqli_fetch_array($query);
+				
+				echo "<h2 class='text-success'>".$fetch['username']."</h2>";
+			?>
+			<a href="logout.php">Logout</a>
+		</div>
+		
+
+
+
+	</div>
+
+	<table cellpadding="10" cellspacing="5" border="3" >
+		<thead>
+        <tr>
+          <th>ID_NO</th>
+          <th>NAME</th>
+          <th>PHONE</th>
+		  <th>ADDRESS</th>
+		  <th>PURPOSE</th>
+		  <th>DATE/TIME</th>
+		  <th>TIMEOUT</th>
+     
+        </tr>
+      </thead>
+  <tbody>
+<?php
+include('db.php');
+
+$sql = "SELECT * FROM visitor;";
+$result = mysqli_stmt_init($conn);
+if (!mysqli_stmt_prepare($result, $sql)) {
+    echo '<p class="error">SQL Error</p>';
+}
+
+
+else{
+  mysqli_stmt_execute($result);
+    $resultl = mysqli_stmt_get_result($result);
+  if (mysqli_num_rows($resultl) > 0){
+      while ($row = mysqli_fetch_assoc($resultl)){
+?> 
+        <TR>
+        <TD><?php echo $row["id_no"];?></TD>
+        <TD><?php echo $row["name"];?></TD>
+        <TD><?php echo $row["phone"];?></TD>
+		<TD><?php echo $row["address"];?></TD>
+		<TD><?php echo $row["purpose"];?></TD>
+		<TD><?php echo $row["date"];?></TD>
+		<TD><?php echo $row["time"];?></TD>
+        
+        </TR>
+        
+<?php
+
+    }
+    # code...
+  }
+}
+?>
+  </tbody>
+</table>
+
+
+
+</body>	
+</html>
+
+
+
+
+
+
+
+
+SELECT `time` FROM `visitor` WHERE `time`= "00:00:00";
+
+
+SELECT `time` FROM `visitor` WHERE `time`= "00:00:00" AND id_no=45;
+
+ORDER BY `visitor`.`id_no` ASC
+
+
+
+
+SELECT `time` FROM `visitor` WHERE `time`= "00:00:00" AND id_no=45 ORDER BY `visitor`.`id_no` ASC;
+
+
+
+$sql = "SELECT `time`,id_no FROM `visitor` WHERE time =\'00:00:00\' AND `id_no`=36  ORDER BY `visitor`.`id_no` DESC;";
+
+
+
+    <?php
+include('db.php');
+if(ISSET($_POST['timeout'])){
+ 
+  $id_no = $_POST['id_no'];
+  $sql = "UPDATE visitor SET time=now() WHERE id_no='$id_no' ";
+  $result = mysqli_query($conn, $sql);
+  echo "<script>alert ('Guest  Time Out successfully!')</script>";
+  echo "<script>window.location='index.php'</script>"; 
+
+}
+
+?>
+
+
+
+ <?php
+include('db.php');
+if(ISSET($_POST['timeout'])){
+  
+    $id_no = $_POST['id_no'];
+    $sql = "UPDATE visitor SET time=now() WHERE id_no='$id_no' AND time IS NULL;";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+
+  echo "<script>alert ('Guest  Time Out successfully!')</script>";
+  echo "<script>window.location='index.php'</script>"; 
+    }
+  }
+?>
+    
